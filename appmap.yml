@@ -1,4 +1,4 @@
-name: pet-clinic
+name: pet-clinic1
 packages:
 -  path: com.springframework.samples.petclinic
    #exclude:                                                                                                              
