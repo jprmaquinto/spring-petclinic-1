@@ -8,9 +8,7 @@ branches:
 
 
 before_install: |
-  # Avoid scribbling on the build environment by wrapping these
-  # operations in a function.
-  setup_for_appmaps() {
+
     set -e -o pipefail
     local APPMAP_JAVA_VERSION=java8
     local JAVAP_VERSION=$(javap -version | cut -d. -f1,2)
@@ -29,7 +27,5 @@ before_install: |
     curl -sSL https://api.github.com/repos/land-of-apps/land-of-apps/contents/bin/upload-appmaps \
       | jq -r .content | base64 --decode > upload-appmaps
     set +e +o pipefail
-  }
-  setup_for_appmaps
 after_script:
 - env DEBUG=true ruby ./upload-appmaps
