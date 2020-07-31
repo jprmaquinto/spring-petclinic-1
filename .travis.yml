@@ -1,5 +1,7 @@
-insert # Turn on validation, so we can use import:
-version: ~> 1.0
+# insert # Turn on validation, so we can use import:
+#version: ~> 1.0
+dist: trusty
+language: java
 
 jdk:
 - openjdk8
