@@ -277,6 +277,12 @@
           </dependency>
         </dependencies>
       </plugin>
+        <plugin>
+                <artifactId>maven-surefire-plugin</artifactId>
+                <configuration>
+                    <argLine>-javaagent:appmap.jar -XX:MaxPermSize=128m -Dappmap.output.directory=./appmap</argLine>
+                </configuration>
+        </plugin>
     </plugins>
   </build>
 

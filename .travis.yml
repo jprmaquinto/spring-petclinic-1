@@ -8,5 +8,5 @@ jdk:
 import: travis/java-imports.yml
   
 script:
-- mvn -DargLine="-javaagent:./lib/appmap-0.3.1-java8.jar" test
-- appmap upload --branch "${BRANCH_NAME}" --environment ci --no-open *.appmap.json
+- mvn test
+- appmap upload --branch "${BRANCH_NAME}" --environment ci --no-open ./appmap
