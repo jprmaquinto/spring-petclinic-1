@@ -10,9 +10,7 @@ branches:
   - /appland-.*/
 
 
-before_install: |
-  # Avoid scribbling on the build environment by wrapping these
-  # operations in a function.
+before_install: 
   setup_for_appmaps() {
     set -e -o pipefail
     local APPMAP_JAVA_VERSION=java8
