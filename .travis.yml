@@ -8,4 +8,3 @@ import: jprmaquinto/land-of-apps:travis/java-imports.yml
 
 script:
 - mvn -DargLine="-javaagent:appmap.jar" test
-- appmap upload --branch "TRAVIS_PULL_REQUEST_BRANCH " --environment ci --no-open ./appmap
