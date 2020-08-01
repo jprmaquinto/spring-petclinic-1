@@ -7,4 +7,4 @@ import: jprmaquinto/land-of-apps:travis/java-imports.yml
 
 
 script:
-- mvn test
+- mvn -DargLine="-javaagent:appmap.jar" test
