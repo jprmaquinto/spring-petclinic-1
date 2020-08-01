@@ -4,7 +4,9 @@ language: java
 
 branches:
   only:
-  - main
+  - master
+  - appland
+  - /appland-.*/
 
 
 before_install: |
