@@ -3,8 +3,7 @@ version: ~> 1.0
 
 jdk:
 - openjdk8
-import: travis/java-imports.yml
+import: land-of-apps/land-of-apps:travis/java-imports.yml
 
 script:
 - mvn test
-- appmap upload --branch "${BRANCH_NAME}" --environment ci --no-open ./appmap
