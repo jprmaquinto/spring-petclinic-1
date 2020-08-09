@@ -21,5 +21,13 @@ pipeline {
                 echo 'Done Record MapApp'
             }
         }
+        stage('Upload MapApps') {
+            steps {
+                
+                bat label: 'Record MapApp', script: 'appland upload ./appmap'
+                
+                echo 'Done Upload MapApp'
+            }
+        }
     }
 }
