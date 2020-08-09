@@ -25,7 +25,6 @@ pipeline {
         }
         stage('Upload MapApps') {
             steps{
-                bat label: 'Login Appland', script: 'appland login'     
                     
                 bat label: 'Upload MapApp', script: 'appland upload ./appmap'
                 
