@@ -13,10 +13,10 @@ pipeline {
                 echo 'Done Building Spring Pet Clinic'
             }
         }
-        stage('Record MapApp') {
+        stage('Record MapApps') {
             steps {
                 
-                bat label: 'Record MapApp', script: 'mvn -DargLine="-javaagent:appmap.jar" test'
+                bat label: 'Record MapApp', script: 'mvn -DargLine="-javaagent:appmap.jar -Dappmap.output.directory=./appmap" test'
                 
                 echo 'Done Record MapApp'
             }
