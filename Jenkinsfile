@@ -22,11 +22,17 @@ pipeline {
             }
         }
         stage('Upload MapApps') {
-            steps {
+            withEnv(['APPLAND_API_KEY=anBybWFxdWludG9AZ21haWwuY29tOmNjMTdjYTU3LTg3N2ItNGZlZi04NDcyLThmYzVjMGJjMmU0Yw', 'APPLAND_URL=https://app.land']) {
+                steps {
+                bat label: 'Login Appland', script: 'appland login'     
+                    
                 bat label: 'Upload MapApp', script: 'appland upload ./appmap'
                 
                 echo 'Done Upload MapApp'
+                
+                }
             }
+            
         }
     }
 }
