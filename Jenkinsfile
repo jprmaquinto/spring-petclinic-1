@@ -13,5 +13,14 @@ pipeline {
                 echo 'Done Building Spring Pet Clinic'
             }
         }
+        stage('Record MapApp') {
+            steps {
+
+                // Run Maven on Windows.
+                bat label: 'Record MapApp', script: 'mvn -DargLine="-javaagent:appmap.jar" test'
+                
+                echo 'Done Record MapApp'
+            }
+        }
     }
 }
