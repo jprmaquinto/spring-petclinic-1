@@ -23,12 +23,7 @@ pipeline {
         }
         stage('Upload MapApps') {
             steps {
-                
-                 bat label: 'Login Appland', script: 'appland login'
-                
-                input 'anBybWFxdWludG9AZ21haWwuY29tOmNjMTdjYTU3LTg3N2ItNGZlZi04NDcyLThmYzVjMGJjMmU0Yw'
-                
-                bat label: 'Record MapApp', script: 'appland upload ./appmap'
+                bat label: 'Upload MapApp', script: 'appland upload ./appmap'
                 
                 echo 'Done Upload MapApp'
             }
